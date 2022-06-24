@@ -64,15 +64,17 @@ entity top_tc_statemachine is
 --    start_command             : in  std_logic;
     global_orbit              : in  std_logic_vector (31 downto 0);
     s_TTC_RXD	              : in  std_logic_vector(119 downto 0);
+    count                     : in  std_logic_vector (67 downto 0); --> Generalising the problem to an unprecised number of bits.   
     d_i                       : in  std_logic_vector (67 downto 0); --> Generalising the problem to an unprecised number of bits.   
 --    bc_number_i               : in  std_logic_vector (11 downto 0); -- BC ID
     d_o                       : out std_logic_vector (79 downto 0); -- GBT data
     dv_o                      : out std_logic;                      -- GBT data flag
+    runpattern_rdh            : in  std_logic_vector (31 downto 0);
     --------------------------------------------------------------------------------
     -- TCR start/stop
     --------------------------------------------------------------------------------
-    start_tcr_data_taking_o   : out std_logic;
-    stop_tcr_data_taking_o    : out std_logic; 
+    start_tcr_data_taking_i   : in std_logic;
+    stop_tcr_data_taking_i    : in std_logic; 
     --------------------------------------------------------------------------------
     -- TCR state machine coders (same interface as IR)
     --------------------------------------------------------------------------------
@@ -113,7 +115,7 @@ architecture Behavioral of top_tc_statemachine is
 	signal input_data_s    : std_logic_vector(67 downto 0) := (others => '0');
 	signal input_data_short: std_logic_vector(67 downto 0) := (others => '0');
 --	signal count           : std_logic_vector(47 downto 0) := x"000000000000";
-	signal count           : std_logic_vector(82 downto 0) := (others => '0');
+--	signal count           : std_logic_vector(82 downto 0) := (others => '0');
 	signal count_bc        : std_logic_vector(11 downto 0) := (others => '0');
 	signal u_orbit_id      : std_logic_vector(31 downto 0) := (others => '0');
 --	signal formated_data_s : std_logic_vector(79 downto 0);
@@ -122,8 +124,8 @@ architecture Behavioral of top_tc_statemachine is
 	signal validated_data2 : std_logic_vector(82 downto 0) := (others => '0');
 		
 	-- TCR start/stop protocol	
-	signal start_tcr_data_taking : std_logic; 
-	signal stop_tcr_data_taking  : std_logic;
+--	signal start_tcr_data_taking : std_logic; 
+--	signal stop_tcr_data_taking  : std_logic;
     signal helper_orbit_bc       : std_logic_vector(31 downto 0) := (others => '0');
 	signal random_data           : std_logic_vector(47 downto 0) := (others => '0');
 
@@ -205,6 +207,7 @@ component tc_statemachine
     	trg_i                     : in  std_logic_vector(119 downto 0);
     	trg_mask_i                : in  std_logic_vector(31  downto 0);
     	ctp_orbit                 : in  std_logic_vector(31  downto 0);
+        runpattern_rdh            : in  std_logic_vector(31 downto 0);    	
         ------------------------------------------------------
         -- Data Control
         ------------------------------------------------------
@@ -257,17 +260,17 @@ rnd_data : prsg_tcr
 		threshold   => threshold
 	);
 
-process (clk_bc_240, tick_bc)
-    begin
-        if (clk_bc_240'Event and clk_bc_240 = '1') then
-            if (tick_bc = '1') then
-                count <= count + '1';   -- counting up
-                if count(11 downto 0) = "111111111111" then
-                  count <= (others => '0');
-                end if;  
-            end if;
-        end if;
-    end process;
+--process (clk_bc_240, tick_bc)
+--    begin
+--        if (clk_bc_240'Event and clk_bc_240 = '1') then
+--            if (tick_bc = '1') then
+--                count <= count + '1';   -- counting up
+--                if count(11 downto 0) = "111111111111" then
+--                  count <= (others => '0');
+--                end if;  
+--            end if;
+--        end if;
+--    end process;
 
 
   p_bc_cnt_id : process(clk_bc_240)
@@ -291,6 +294,7 @@ validated_data2(11 downto  0) <= count_bc;
 validated_data2(27 downto 12) <= x"CAFE";
 
 input_data_s <= d_i              when (d_i_sel(5 downto 3) = "001") else -- bit 0 from register ctpreadout.ctrl
+                count            when (d_i_sel(5 downto 3) = "010") else
                 input_data_short when (d_i_sel(5 downto 3) = "100") else
                 d_i;
 
@@ -359,25 +363,25 @@ buffer_from_fifo: buffer_fifo
 ------------------------------------------------------
 -- START and STOP of TCR data taking
 ------------------------------------------------------
-start_tcr_data_taking_o <= start_tcr_data_taking;
-stop_tcr_data_taking_o  <= stop_tcr_data_taking;
+--start_tcr_data_taking_o <= start_tcr_data_taking;
+--stop_tcr_data_taking_o  <= stop_tcr_data_taking;
   
-ctrl_tcr: process (clk_bc_240)
-          begin 
-          if (rising_edge(clk_bc_240)) then -- 240 MHz !!!
-             if (gbt_rx_clk240_en = '1') then
+--ctrl_tcr: process (clk_bc_240)
+--          begin 
+--          if (rising_edge(clk_bc_240)) then -- 240 MHz !!!
+--             if (gbt_rx_clk240_en = '1') then
                          
-                if (gbt_rx_data_flag = '0' and gbt_rx_data = x"300000000000DEADBEEF") then -- SWT word is when GBT bits 79:76 = 0x3
-                   start_tcr_data_taking <= '1';
-                elsif (gbt_rx_data_flag = '0' and gbt_rx_data = x"300000000000BEEFDEAD") then -- SWT word is when GBT bits 79:76 = 0x3
-                   stop_tcr_data_taking <= '1';
-                else
-                   start_tcr_data_taking <= '0';
-                   stop_tcr_data_taking <= '0';
-             end if;
-             end if;
-         end if;
-         end process;
+--                if (gbt_rx_data_flag = '0' and gbt_rx_data = x"300000000000DEADBEEF") then -- SWT word is when GBT bits 79:76 = 0x3
+--                   start_tcr_data_taking <= '1';
+--                elsif (gbt_rx_data_flag = '0' and gbt_rx_data = x"300000000000BEEFDEAD") then -- SWT word is when GBT bits 79:76 = 0x3
+--                   stop_tcr_data_taking <= '1';
+--                else
+--                   start_tcr_data_taking <= '0';
+--                   stop_tcr_data_taking <= '0';
+--             end if;
+--             end if;
+--         end if;
+--         end process;
 
 
 
@@ -391,12 +395,13 @@ tc_state_machine : tc_statemachine
     rst_i                     => rst_tcr_state_machine_i,			
 --    START                     => start_command,	
      --
-    start_tcr_data_taking_i   => start_tcr_data_taking,
-    stop_tcr_data_taking_i    => stop_tcr_data_taking,
+    start_tcr_data_taking_i   => start_tcr_data_taking_i,
+    stop_tcr_data_taking_i    => stop_tcr_data_taking_i,
     --
     trg_i                     => s_TTC_RXD(119 downto 0),
     trg_mask_i                => s_trg_mask,	
     ctp_orbit                 => global_orbit,	
+    runpattern_rdh            => runpattern_rdh,
 	data_i                    => validated_data,
 --	data_i                    => input_data_s,
 	data_rd_fifo              => read_fifo,

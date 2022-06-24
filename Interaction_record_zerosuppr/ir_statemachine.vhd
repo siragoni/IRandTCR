@@ -27,14 +27,15 @@ entity ir_statemachine is
     ------------------------------------------------------
 	-- START and STOP of IR data taking
 	------------------------------------------------------
-	start_tcr_data_taking_i   : in std_logic;
-	stop_tcr_data_taking_i    : in std_logic;
+	start_ir_data_taking_i   : in std_logic;
+	stop_ir_data_taking_i    : in std_logic;
     --------------------------------------------------------------------------------
     -- TRG interface
     --------------------------------------------------------------------------------
     trg_i                     : in  std_logic_vector(119 downto 0);
     trg_mask_i                : in  std_logic_vector(31 downto 0);
     ctp_orbit                 : in  std_logic_vector(31 downto 0);
+    runpattern_rdh            : in  std_logic_vector(31 downto 0);    	   
     --------------------------------------------------------------------------------
     -- Control signals
     --------------------------------------------------------------------------------
@@ -60,7 +61,7 @@ entity ir_statemachine is
     --------------------------------------------------------------------------------
     -- MONITORING
     --------------------------------------------------------------------------------
-   	tcr_state_machine_codes_o : out std_logic_vector(31 downto 0);
+   	ir_state_machine_codes_o : out std_logic_vector(31 downto 0);
     ev_cnt_o                  : out std_logic_vector(31 downto 0);
     trgmisscnt_o              : out std_logic_vector(31 downto 0);
     sn                        : in  std_logic_vector( 7 downto 0)
@@ -82,7 +83,7 @@ architecture rtl of ir_statemachine is
   constant c_FEE_ID            : std_logic_vector(15 downto 0) := "0000" & "0000" & sn(7 downto 0);
   -- header size = 4 words x 80 bits / (8 bit/byte) = 40 bytes
   signal c_HEADER_SIZE         : std_logic_vector(7 downto 0)  := x"40";
-  signal c_DET_FIELD           : std_logic_vector(31 downto 0) := x"12345678"; -- originally x"00000000"
+  signal c_DET_FIELD           : std_logic_vector(31 downto 0) := x"6003"; -- originally x"00000000"
   signal c_PAR                 : std_logic_vector(15 downto 0) := x"0000";
   signal c_PRIORITY_BIT        : std_logic_vector(7 downto 0)  := x"00";
   constant c_SOURCE_ID         : std_logic_vector(7 downto 0)  := "00010001"; --> TRG is 17
@@ -174,6 +175,9 @@ architecture rtl of ir_statemachine is
 
   signal page_counter   : unsigned(15 downto 0) := (others => '0'); 
   signal helper_stopbit : std_logic := '0';
+
+
+  signal runpattern_reg   : std_logic_vector(31 downto 0) := (others => '0');
 
   -- ===========================
   --  WHY
@@ -437,14 +441,14 @@ begin
   -- Global enable signal:
   -- stop sending packets if paused 
 --  run <= not s_pause;
---  run <= not stop_tcr_data_taking_i;  
+--  run <= not stop_ir_data_taking_i;  
   p_stopdata : process(clk_i)
   begin
     if rising_edge(clk_i) then
       if clk_en_i = '1' then
-        if run = '1' and stop_tcr_data_taking_i = '1' then
+        if run = '1' and stop_ir_data_taking_i = '1' then
            run <= '0';
-        elsif start_tcr_data_taking_i = '1' then
+        elsif start_ir_data_taking_i = '1' then
            run <= '1';
         end if;     
       end if;
@@ -476,7 +480,7 @@ begin
   end process p_sm;
 
   p_pcmb : process(s_cs, run,
-                   start_tcr_data_taking_i, s_trg, s_payload_not_sent, empty_fifo, hb_packer, eox_0_packer, eox_1_packer,
+                   start_ir_data_taking_i, s_trg, s_payload_not_sent, empty_fifo, hb_packer, eox_0_packer, eox_1_packer,
                    wasHB, wasEOx, HB, i_plcnt, s_last_word, s_last_idle,
                    hbf_closed, s_no_idle_btw_events, eox_pkt_sent)
   begin
@@ -485,8 +489,8 @@ begin
     case s_cs is
       when IDLE =>
         reset_buffer <= '0';
---        if run = '1' and ((start_tcr_data_taking_i = '1') or (s_trg = '1')) then
-        if ((start_tcr_data_taking_i = '1') or (s_trg = '1')) then
+--        if run = '1' and ((start_ir_data_taking_i = '1') or (s_trg = '1')) then
+        if ((start_ir_data_taking_i = '1') or (s_trg = '1')) then
           s_ns <= SEND_SOP;
         end if;
 
@@ -993,6 +997,39 @@ begin
   ev_cnt_o     <= std_logic_vector(u_ev_cnt);
   trgmisscnt_o <= std_logic_vector(trgmisscnt);
   
+  
+  
+  
+  
+  
+  
+  
+  -------------------------------------------------------
+  -- Update run pattern data
+  -------------------------------------------------------
+
+  p_update_runpattern : process(clk_i)
+  begin
+    if rising_edge(clk_i) then
+      if clk_en_i = '1' then
+        runpattern_reg <= runpattern_rdh;
+      end if;
+    end if;
+  end process p_update_runpattern;
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
   --------------------------------------------------------------------------------
   -- Register the output of the SM
   -- DATA conisists of the same 32 bit word repeated all over the GBT word
@@ -1005,19 +1042,19 @@ begin
         when SEND_SOP =>
           d_o(79 downto 76) <= c_SOP;
           dv_o <= '0';
-          tcr_state_machine_codes_o(3 downto 0) <= "0001";
+          ir_state_machine_codes_o(3 downto 0) <= "0001";
           
         when SEND_RDH_WORD0 =>
           d_o  <= c_ZERO(31 downto 0) & c_SOURCE_ID & c_PRIORITY_BIT & c_FEE_ID & c_HEADER_SIZE & c_HEADER_VERSION;
           dv_o <= '1';
-          tcr_state_machine_codes_o(3 downto 0) <= "0010";
+          ir_state_machine_codes_o(3 downto 0) <= "0010";
 
         when SEND_RDH_WORD1 =>
 --          d_o  <= c_ZERO(15 downto 0) & s_hborbit & c_ZERO(19 downto 0) & s_hbbc;
           d_o  <= c_ZERO(15 downto 0) & std_logic_vector(u_orbit_cnt) & c_ZERO(19 downto 0) & std_logic_vector(u_bc_cnt);
 --          d_o  <= c_ZERO(15 downto 0) & ctp_orbit & c_ZERO(19 downto 0) & bc_number_i;
           dv_o <= '1';
-          tcr_state_machine_codes_o(3 downto 0) <= "0011";
+          ir_state_machine_codes_o(3 downto 0) <= "0011";
 
           
         when SEND_RDH_WORD2 =>
@@ -1025,13 +1062,14 @@ begin
 --          d_o  <= c_ZERO(23 downto 0) & "00000000"  & std_logic_vector(page_counter) & s_ttype; -- original
           d_o  <= c_ZERO(23 downto 0) & "0000000" & helper_stopbit & std_logic_vector(page_counter) & s_ttype; 
           dv_o <= '1';
-          tcr_state_machine_codes_o(3 downto 0) <= "0100";
+          ir_state_machine_codes_o(3 downto 0) <= "0100";
 
           
         when SEND_RDH_WORD3 =>
-          d_o  <= c_ZERO(31 downto 0) & c_PAR & c_DET_FIELD;
+--          d_o  <= c_ZERO(31 downto 0) & c_PAR & c_DET_FIELD;
+          d_o  <= c_ZERO(31 downto 0) & c_PAR & runpattern_reg;
           dv_o <= '1';
-          tcr_state_machine_codes_o(3 downto 0) <= "0101";
+          ir_state_machine_codes_o(3 downto 0) <= "0101";
 
           
         when SEND_DATA =>
@@ -1045,7 +1083,7 @@ begin
             else
               d_o <= data_i(79 downto 0);
               w_o <= std_logic_vector(u_pat_cnt);
-              tcr_state_machine_codes_o(3 downto 0) <= "0110";
+              ir_state_machine_codes_o(3 downto 0) <= "0110";
 
             help_vector := data_i(79 downto 0);
             if( or_reduce(help_vector) = '0') then          
@@ -1065,12 +1103,12 @@ begin
         when SEND_EOP =>
           d_o(79 downto 76) <= c_EOP;
           dv_o <= '0';
-          tcr_state_machine_codes_o(3 downto 0) <= "0111";
+          ir_state_machine_codes_o(3 downto 0) <= "0111";
           
         when IDLE | NEW_RDH | SEND_IDLE | WAIT_FOR_TRIGGER =>
           d_o  <= (others => '0'); -- my addition, not in the original file
           dv_o <= '0';
-          tcr_state_machine_codes_o(3 downto 0) <= "1000";
+          ir_state_machine_codes_o(3 downto 0) <= "1000";
       end case;
     end if;
   end process p_out;

@@ -52,6 +52,7 @@ entity packer_ir2 is
 end packer_ir2;
 
 architecture Behavioral of packer_ir2 is
+  signal data_i_reg        : std_logic_vector(67  downto 0);
   signal temp_data_s       : std_logic_vector(299 downto 0):= (others => '0');
   signal zeroes            : std_logic_vector(299 downto 0):= (others => '0');
   signal s_store_count     : std_logic_vector(8   downto 0):= (others => '0');
@@ -66,6 +67,8 @@ architecture Behavioral of packer_ir2 is
 
 begin
 
+data_i_reg <= data_i when rising_edge(clk_i);
+
     process(clk_i)
       variable store_count     : natural := 0;
       variable new_store_count : natural := 0;
@@ -76,7 +79,7 @@ begin
       if rising_edge(clk_i) then
       if clk_en_i = '1' then
         store_count := to_integer(unsigned(s_store_count(8 downto 0)));
-        write_flag  := or_reduce(data_i);
+        write_flag  := or_reduce(data_i_reg);
         if( rst_i = '1' ) then
            s_store_count   <= (others => '0');
            temp_data_s     <= (others => '0');
@@ -114,7 +117,7 @@ begin
           helper_orbit    <= '0';
           case store_count is
 	           when 0 =>
-	               temp_data_s(59  downto  0) <= data_i(47 downto 0) & bc_count_i;
+	               temp_data_s(59  downto  0) <= data_i_reg(47 downto 0) & bc_count_i;
 	               temp_data_s(299 downto 61) <= (others => '0');
 	               store_count := 60;
 	               data <= (others => '0');
@@ -124,8 +127,8 @@ begin
 	               data(82)                               <= s_EOx_1;  
                    data(81)                               <= s_EOx_0;  
                    data(80)                               <= s_HB;  
-                   data(79           downto  0)           <= data_i(47 downto 0) & bc_count_i(11 downto 0) & temp_data_s(19 downto 0);
---                 temp_data_s(15      downto  0)           <= data_i(63 downto 48);
+                   data(79           downto  0)           <= data_i_reg(47 downto 0) & bc_count_i(11 downto 0) & temp_data_s(19 downto 0);
+--                 temp_data_s(15      downto  0)           <= data_i_reg(63 downto 48);
 --	               temp_data_s(299     downto 16)           <= (others => '0');                   
                    temp_data_s(299     downto  0)           <= (others => '0');
      	           store_count := 0;
@@ -135,8 +138,8 @@ begin
 	               data(82)                               <= s_EOx_1;  
                    data(81)                               <= s_EOx_0;  
                    data(80)                               <= s_HB;  
-                   data(79           downto  0)           <= data_i(27 downto 0) & bc_count_i(11 downto 0) & temp_data_s(39 downto 0);
-                   temp_data_s(19      downto  0)           <= data_i(47 downto 28);
+                   data(79           downto  0)           <= data_i_reg(27 downto 0) & bc_count_i(11 downto 0) & temp_data_s(39 downto 0);
+                   temp_data_s(19      downto  0)           <= data_i_reg(47 downto 28);
 	               temp_data_s(299     downto 20)           <= (others => '0');                   
      	           store_count := 20;
  	               valid_flag <= '1';
@@ -145,8 +148,8 @@ begin
 	               data(82)                               <= s_EOx_1;  
                    data(81)                               <= s_EOx_0;  
                    data(80)                               <= s_HB;  
-                   data(79           downto  0)           <= data_i(7 downto 0) & bc_count_i(11 downto 0) & temp_data_s(59 downto 0);
-                   temp_data_s(39      downto  0)           <= data_i(47 downto 8);
+                   data(79           downto  0)           <= data_i_reg(7 downto 0) & bc_count_i(11 downto 0) & temp_data_s(59 downto 0);
+                   temp_data_s(39      downto  0)           <= data_i_reg(47 downto 8);
 	               temp_data_s(299     downto 40)           <= (others => '0');                   
      	           store_count := 40;
 	               valid_flag <= '1';

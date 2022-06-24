@@ -61,10 +61,10 @@ entity ctpreadout is
    	--------------------------------------------------------------------------------
     -- Resets
     --------------------------------------------------------------------------------
-    rst_ir_buffer_i           : in std_logic;
-    rst_ir_state_machine_i    : in std_logic;
-    rst_tcr_buffer_i          : in std_logic;
-    rst_tcr_state_machine_i   : in std_logic;
+    rst_irtcr_buffers_i           : in std_logic;
+    rst_irtcr_state_machines_i    : in std_logic;
+--    rst_tcr_buffer_i          : in std_logic;
+--    rst_tcr_state_machine_i   : in std_logic;
     --------------------------------------------------------------------------------
     -- Data to GBT		
     --------------------------------------------------------------------------------
@@ -78,6 +78,12 @@ entity ctpreadout is
     dv_o_ir                      : out std_logic;                      -- GBT data flag
     d_o_tcr                      : out std_logic_vector (79 downto 0); -- GBT data
     dv_o_tcr                     : out std_logic;                      -- GBT data flag
+    --------------------------------------------------------------------------------
+    -- Run Pattern
+    --------------------------------------------------------------------------------
+    global_run_and_det_ena       : in  std_logic_vector(17 downto 0);
+    run_pattern_rdh              : in  std_logic_vector(31 downto 0);
+    oredSOX                      : in  std_logic;
     --------------------------------------------------------------------------------
     -- start/stop monitoring
     --------------------------------------------------------------------------------
@@ -94,9 +100,10 @@ entity ctpreadout is
     --------------------------------------------------------------------------------
     -- Miscellaneous
     --------------------------------------------------------------------------------
-    sn                        : in  std_logic_vector ( 7 downto 0);
-    threshold_ir              : in  std_logic_vector (31 downto 0);
-    threshold_tcr             : in  std_logic_vector (31 downto 0)
+    sn                        : in    std_logic_vector ( 7 downto 0);
+    threshold_ir              : in    std_logic_vector (31 downto 0);
+    threshold_tcr             : in    std_logic_vector (31 downto 0);
+    orbit_stat                : inout std_logic_vector (31 downto 0) 
         
         );
 end ctpreadout;
@@ -114,6 +121,7 @@ architecture Behavioral of ctpreadout is
     
    signal count       : std_logic_vector (67 downto 0) := (others => '0');
    signal orbit_reg   : std_logic_vector (31  downto 0) := (others => '0');
+   signal pattern_reg : std_logic_vector (31  downto 0) := (others => '0');
    signal tcr_s_ttcrx : std_logic_vector (119 downto 0) := (others => '0');
    signal tcr_data    : std_logic_vector (67  downto 0) := (others => '0');
    signal ir_data     : std_logic_vector (67  downto 0) := (others => '0');
@@ -256,7 +264,7 @@ swt_monitoring <= std_logic_vector(counter_SWT);
 --==============================
 -- Generate HB trigger
 --==============================
-generate_HB_trigger: process(global_orbit)
+generate_HB_trigger: process(clk_bc_240, global_orbit)
         variable helper_orbit_p : std_logic_vector(31 downto 0) := (others => '0');
     begin
         if (rising_edge(clk_bc_240)) then
@@ -274,6 +282,30 @@ generate_HB_trigger: process(global_orbit)
             end if;
         end if;
     end process generate_HB_trigger;
+    
+    
+--==============================
+-- Change Run Pattern RDH
+--==============================
+change_run_pattern: process(clk_bc_240, global_run_and_det_ena)
+        variable helper_change_run_pattern : std_logic_vector(17 downto 0) := (others => '0');
+        variable helper_status             : std_logic := '0';
+    begin
+        if (rising_edge(clk_bc_240)) then
+            if (tick_bc = '1') then
+                  helper_change_run_pattern := global_run_and_det_ena;
+                  if   ((unsigned(helper_change_run_pattern) /= unsigned(pattern_reg)) and (oredSOX = '1')) then
+                     pattern_reg    <= run_pattern_rdh;
+                  elsif (unsigned(helper_change_run_pattern) /= unsigned(pattern_reg)) then
+                     helper_status  := '1';   
+                  elsif ((oredSOX = '1') and (helper_status = '1')) then
+                     helper_status  := '0';
+                     pattern_reg    <= run_pattern_rdh;                   
+                  end if;                 
+            end if;
+        end if;
+    end process change_run_pattern;
+    
 
 --==============================
 -- Counter Mode
@@ -316,10 +348,10 @@ ir2: entity work.top_ir_statemachine
             gbt_rx_data_flag          => gbt1_rx_data(84),
             gbt_rx_data               => gbt1_rx_data(79 downto 0), -- GBT Rx 1
             --------------------------------------------------------------------------------
-            -- TCR resets
+            -- IR resets
             --------------------------------------------------------------------------------
-            rst_ir_buffer_i          => rst_ir_buffer_i, 
-            rst_ir_state_machine_i   => rst_ir_state_machine_i, 
+            rst_ir_buffer_i          => rst_irtcr_buffers_i, 
+            rst_ir_state_machine_i   => rst_irtcr_state_machines_i, 
             --------------------------------------------------------------------------------
             -- Data to GBT		
             --------------------------------------------------------------------------------
@@ -330,13 +362,14 @@ ir2: entity work.top_ir_statemachine
             d_i                       => ir_data,  -- [67:0], 48 trigger input + 20 zeros   
             d_o                       => gbt1_tx_data, -- GBT data
             dv_o                      => gbt1_txIsDataSel,  
+            runpattern_rdh            => pattern_reg,
             --------------------------------------------------------------------------------
-            -- TCR start/stop
+            -- IR start/stop
             --------------------------------------------------------------------------------
             start_ir_data_taking_i   => start_ir_data_taking_i or start_tcr_data_taking_i,
             stop_ir_data_taking_i    => stop_ir_data_taking_i or stop_tcr_data_taking_i,
             --------------------------------------------------------------------------------
-            -- TCR state machine coders (same interface as IR)
+            -- IR state machine coders (same interface as IR)
             --------------------------------------------------------------------------------
             ir_state_machine_codes_o => open,
              --------------------------------------------------------------------------------
@@ -376,8 +409,8 @@ tcr: entity work.top_tc_statemachine
             --------------------------------------------------------------------------------
             -- TCR resets
             --------------------------------------------------------------------------------
-            rst_tcr_buffer_i          => rst_tcr_buffer_i, 
-            rst_tcr_state_machine_i   => rst_tcr_state_machine_i, 
+            rst_tcr_buffer_i          => rst_irtcr_buffers_i, 
+            rst_tcr_state_machine_i   => rst_irtcr_state_machines_i, 
             --------------------------------------------------------------------------------
             -- Data to GBT		
             --------------------------------------------------------------------------------
@@ -390,6 +423,7 @@ tcr: entity work.top_tc_statemachine
 --            bc_number_i               => bcid, -- BC ID
             d_o                       => gbt2_tx_data, -- GBT data
             dv_o                      => gbt2_txIsDataSel,  
+            runpattern_rdh            => pattern_reg,  
             --------------------------------------------------------------------------------
             -- TCR start/stop
             --------------------------------------------------------------------------------

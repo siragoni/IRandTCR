@@ -1,0 +1,244 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon May  9 15:45:53 2022
+# Process ID: 6548
+# Current directory: C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11680 C:\Users\Simone Ragoni\alice\IRandTCR\ctpreadout2\ctpreadout2.xpr
+# Log file: C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/vivado.log
+# Journal file: C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 954.461 ; gain = 107.012
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  {{C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/TCR_tb.vhd}}]
+launch_simulation -install_path C:/questasim64_10.6c/win64
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-50] Using simulator executables from 'C:/questasim64_10.6c/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+INFO: [USF_Questa-11] File 'C:/Users/Simone Ragoni/questalib_106c/modelsim.ini' copied to run dir:'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [SIM-utils-54] Inspecting design source files for 'tcr_tb' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/ir_fifo/ir_fifo.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/tc_fifo/tc_fifo.xml'
+INFO: [USF-Questa-107] Finding global include files...
+INFO: [USF-Questa-108] Finding include directories and verilog header directory paths...
+INFO: [USF-Questa-109] Fetching design files from 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {tcr_tb_compile.do}
+# ** Warning: (vlib-34) Library already exists at "questa_lib/work".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+# QuestaSim-64 vmap 10.6c Lib Mapping Utility 2017.07 Jul 26 2017
+# vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:08:44 on May 09,2022
+# vlog -64 -incr -work xil_defaultlib ../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v 
+# -- Skipping module tc_fifo
+# 
+# Top level modules:
+# 	tc_fifo
+# End time: 16:08:44 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:08:44 on May 09,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigger_class_record/packer.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Trigger_class_record/tc_statemachine.vhd ../../../../../Trigger_class_record/top_tc_statemachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity packer
+# -- Compiling architecture Behavioral of packer
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Compiling entity tc_statemachine
+# -- Compiling architecture rtl of tc_statemachine
+# ** Warning: ../../../../../Trigger_class_record/tc_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# ** Error (suppressible): ../../../../../Trigger_class_record/tc_statemachine.vhd(86): (vcom-1272) Length of expected is 32; length of actual is 16.
+# ** Error: ../../../../../Trigger_class_record/tc_statemachine.vhd(1103): VHDL Compiler exiting
+# End time: 16:08:44 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# child process exited abnormally
+# Error in macro ./tcr_tb_compile.do line 25
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:08:44 on May 09,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigger_class_record/packer.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Trigger_class_record/tc_statemachine.vhd ../../../../../Trigger_class_record/top_tc_statemachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity packer
+# -- Compiling architecture Behavioral of packer
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Compiling entity tc_statemachine
+# -- Compiling architecture rtl of tc_statemachine
+# ** Warning: ../../../../../Trigger_class_record/tc_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# ** Error (suppressible): ../../../../../Trigger_class_record/tc_statemachine.vhd(86): (vcom-1272) Length of expected is 32; length of actual is 16.
+# ** Error: ../../../../../Trigger_class_record/tc_statemachine.vhd(1103): VHDL Compiler exiting
+# End time: 16:08:44 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# child process exited abnormally
+#     while executing
+# "exec <nul: {C:\questasim64_10.6c\win64\vcom.EXE} -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigg..."
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 47)
+#     invoked from within
+# "C:\\questasim64_10.6c\\win64\\vcom -64 -93 -work xil_defaultlib  \
+# "../../../../../Trigger_class_record/buffer_fifo.vhd" \
+# "../../../../../Trigger_cla..."
+QuestaSim> INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:01:32 . Memory (MB): peak = 954.461 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:01:33 . Memory (MB): peak = 954.461 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+WARNING: [filemgmt 20-736] The current top specification, "gbt_top", does not uniquely identify a single design element. Using "gbt_top" (Architecture: structural, Library: xil_defaultlib, File: C:/Users/Simone Ragoni/alice/CTPv15/common_logic/RTL/GBT/gbt_top_itsmft.vhd).
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'xlx_ku_gbt_example_design(structural)' found in library 'xil_defaultlib'
+Duplicate found at line 193 of file C:/Users/Simone Ragoni/alice/CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/xlx_ku_gbt_example_design.vhd
+	(Active) Duplicate found at line 193 of file C:/Users/Simone Ragoni/alice/CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/xlx_ku_gbt_example_design_itsmft.vhd
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'gbt_top(structural)' found in library 'xil_defaultlib'
+Duplicate found at line 223 of file C:/Users/Simone Ragoni/alice/CTPv15/common_logic/RTL/GBT/gbt_top.vhd
+	(Active) Duplicate found at line 224 of file C:/Users/Simone Ragoni/alice/CTPv15/common_logic/RTL/GBT/gbt_top_itsmft.vhd
+[Mon May  9 16:10:38 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.runs/synth_1/runme.log
+set_property file_type {VHDL 2008} [get_files  {{C:/Users/Simone Ragoni/alice/CTPv15/common_logic/RTL/GBT/gbt_top_itsmft.vhd}}]
+reset_run synth_1
+launch_simulation -install_path C:/questasim64_10.6c/win64
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-50] Using simulator executables from 'C:/questasim64_10.6c/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+INFO: [USF_Questa-11] File 'C:/Users/Simone Ragoni/questalib_106c/modelsim.ini' copied to run dir:'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [SIM-utils-54] Inspecting design source files for 'tcr_tb' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/ir_fifo/ir_fifo.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/tc_fifo/tc_fifo.xml'
+INFO: [USF-Questa-107] Finding global include files...
+INFO: [USF-Questa-108] Finding include directories and verilog header directory paths...
+INFO: [USF-Questa-109] Fetching design files from 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {tcr_tb_compile.do}
+# ** Warning: (vlib-34) Library already exists at "questa_lib/work".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+# QuestaSim-64 vmap 10.6c Lib Mapping Utility 2017.07 Jul 26 2017
+# vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:16:15 on May 09,2022
+# vlog -64 -incr -work xil_defaultlib ../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v 
+# -- Skipping module tc_fifo
+# 
+# Top level modules:
+# 	tc_fifo
+# End time: 16:16:15 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:16:15 on May 09,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigger_class_record/packer.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Trigger_class_record/tc_statemachine.vhd ../../../../../Trigger_class_record/top_tc_statemachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity packer
+# -- Compiling architecture Behavioral of packer
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Compiling entity tc_statemachine
+# -- Compiling architecture rtl of tc_statemachine
+# ** Warning: ../../../../../Trigger_class_record/tc_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# ** Error (suppressible): ../../../../../Trigger_class_record/tc_statemachine.vhd(86): (vcom-1272) Length of expected is 32; length of actual is 16.
+# ** Error: ../../../../../Trigger_class_record/tc_statemachine.vhd(1103): VHDL Compiler exiting
+# End time: 16:16:15 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# child process exited abnormally
+# Error in macro ./tcr_tb_compile.do line 25
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:16:15 on May 09,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigger_class_record/packer.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Trigger_class_record/tc_statemachine.vhd ../../../../../Trigger_class_record/top_tc_statemachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity packer
+# -- Compiling architecture Behavioral of packer
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Compiling entity tc_statemachine
+# -- Compiling architecture rtl of tc_statemachine
+# ** Warning: ../../../../../Trigger_class_record/tc_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# ** Error (suppressible): ../../../../../Trigger_class_record/tc_statemachine.vhd(86): (vcom-1272) Length of expected is 32; length of actual is 16.
+# ** Error: ../../../../../Trigger_class_record/tc_statemachine.vhd(1103): VHDL Compiler exiting
+# End time: 16:16:15 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# child process exited abnormally
+#     while executing
+# "exec <nul: {C:\questasim64_10.6c\win64\vcom.EXE} -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigg..."
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 47)
+#     invoked from within
+# "C:\\questasim64_10.6c\\win64\\vcom -64 -93 -work xil_defaultlib  \
+# "../../../../../Trigger_class_record/buffer_fifo.vhd" \
+# "../../../../../Trigger_cla..."
+QuestaSim> INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 954.461 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 954.461 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May  9 16:16:58 2022...

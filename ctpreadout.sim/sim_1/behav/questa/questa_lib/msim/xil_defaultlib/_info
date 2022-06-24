@@ -1,0 +1,544 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout.sim/sim_1/behav/questa
+Ebuffer_fifo
+Z1 w1643786377
+Z2 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z3 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/buffer_fifo.vhd
+Z8 F../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/buffer_fifo.vhd
+l0
+L37
+VigXXoHZRbJO?Q]JTg:jz82
+!s100 lDcBc>I^8boOLYFg:dIBi3
+Z9 OL;C;10.6c;65
+31
+Z10 !s110 1652272763
+!i10b 1
+Z11 !s108 1652272763.000000
+Z12 !s90 -64|-93|-work|xil_defaultlib|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/buffer_fifo.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/packer.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/prsg_tcr.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/tc_statemachine.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd|
+Z13 !s107 ../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/tc_statemachine.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/prsg_tcr.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/packer.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/buffer_fifo.vhd|
+!i113 0
+Z14 o-93 -work xil_defaultlib
+Z15 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+DEx4 work 11 buffer_fifo 0 22 igXXoHZRbJO?Q]JTg:jz82
+l54
+L49
+V6=e4OkdcIF:H?7OFd3fhS3
+!s100 WL2M3>Tm;^_87z5ocLO:M2
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+vglbl
+R10
+!i10b 1
+!s100 JWZ^meD<P7inSF0<1SiO32
+IAl?5;D^:bf?I5A^M>WzmU1
+Z16 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1544155481
+8glbl.v
+Fglbl.v
+L0 6
+Z17 OL;L;10.6c;65
+r1
+!s85 0
+31
+R11
+!s107 glbl.v|
+!s90 -work|xil_defaultlib|glbl.v|
+!i113 0
+Z18 o-work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z19 tCvgOpt 0
+vir_fifo
+!s10a 1643784464
+!s110 1643788066
+!i10b 1
+!s100 WAAU2?@2^Fa4COU]Ze]Tl3
+IRXHhz>GnSDV12imoCD_FY3
+R16
+R0
+w1643784464
+8../../../../ctpreadout.ip_user_files/ip/ir_fifo/sim/ir_fifo.v
+F../../../../ctpreadout.ip_user_files/ip/ir_fifo/sim/ir_fifo.v
+Z20 L0 56
+R17
+r1
+!s85 0
+31
+!s108 1643788066.000000
+!s107 ../../../../ctpreadout.ip_user_files/ip/ir_fifo/sim/ir_fifo.v|
+!s90 -64|-incr|-work|xil_defaultlib|../../../../ctpreadout.ip_user_files/ip/ir_fifo/sim/ir_fifo.v|
+!i113 0
+R18
+R19
+Eir_statemachine
+Z21 w1643787403
+R2
+R3
+R4
+R5
+R6
+R0
+Z22 8../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/ir_statemachine.vhd
+Z23 F../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/ir_statemachine.vhd
+l0
+L18
+VHfi>n=fheD[mJ_e>Th`1K2
+!s100 90LzV<4c4_R6gC5e5`NeU0
+R9
+31
+Z24 !s110 1643789211
+!i10b 1
+Z25 !s108 1643789211.000000
+Z26 !s90 -64|-93|-work|xil_defaultlib|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/buffer_fifo.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/ir_statemachine.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/prsg_tcr.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd|../../../../ctpreadout.srcs/sim_1/imports/IRandTCR/IR_tb.vhd|
+Z27 !s107 ../../../../ctpreadout.srcs/sim_1/imports/IRandTCR/IR_tb.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/prsg_tcr.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/ir_statemachine.vhd|../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/buffer_fifo.vhd|
+!i113 0
+R14
+R15
+Artl
+R2
+R3
+R4
+R5
+R6
+DEx4 work 15 ir_statemachine 0 22 Hfi>n=fheD[mJ_e>Th`1K2
+l209
+L70
+VjGjlQ^V434kNn8;Cdb7aN1
+!s100 M?>_Dng8o]Az0h@cjg`Za2
+R9
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R14
+R15
+Eir_tb
+Z28 w1643788899
+Z29 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R2
+R3
+R4
+R5
+R6
+R0
+Z30 8../../../../ctpreadout.srcs/sim_1/imports/IRandTCR/IR_tb.vhd
+Z31 F../../../../ctpreadout.srcs/sim_1/imports/IRandTCR/IR_tb.vhd
+l0
+L42
+V^CM7c8iFJYi3=6ocBTEJg0
+!s100 OMWj[h1h;QSRIm@l0kZ_92
+R9
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R14
+R15
+Abehavioral
+R29
+R2
+R3
+R4
+R5
+R6
+DEx4 work 5 ir_tb 0 22 ^CM7c8iFJYi3=6ocBTEJg0
+l135
+L46
+V4Gmz>B@MD2I>CU=>Yi7lY0
+!s100 DkNZ20D]zPQhZ@G@>YQA80
+R9
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R14
+R15
+TIR_tb_opt
+!s110 1643789213
+V:UkkHW<QB5=YBU<PZUVRi1
+04 5 10 work ir_tb behavioral 1
+Z32 04 4 4 work glbl fast 0
+Z33 o+acc=npr -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib
+R19
+n@i@r_tb_opt
+Z34 OL;O;10.6c;65
+R0
+Epacker
+R1
+R2
+R3
+R4
+R5
+R6
+R0
+Z35 8../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/packer.vhd
+Z36 F../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/packer.vhd
+l0
+L37
+V:zHIiMn3aW9OHK^diE?:f1
+!s100 Y`<O=JRX6AS8712W7mi]22
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+DEx4 work 6 packer 0 22 :zHIiMn3aW9OHK^diE?:f1
+l68
+L56
+VHa5lnKjfXiMeah?zWU]3M1
+!s100 BCB]3Z9dJ5?W6gdUGR:VK3
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Epacker_ir2
+Z37 w1643786368
+R2
+R3
+R4
+R5
+R6
+R0
+Z38 8../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd
+Z39 F../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd
+l0
+L37
+VzF^KUFT7_@nkHW<8ea<4m3
+!s100 OF9f:Q3zaGFPHZ[_<e4Ug0
+R9
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R14
+R15
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 packer_ir2 0 22 zF^KUFT7_@nkHW<8ea<4m3
+l67
+L54
+V`Q49^M06JOem>:oT@RONP1
+!s100 zaehfI?fjZ>:F1OLYh1Uo1
+R9
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R14
+R15
+Eprsg_tcr
+R1
+R4
+R5
+R6
+R0
+Z40 8../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/prsg_tcr.vhd
+Z41 F../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/prsg_tcr.vhd
+l0
+L7
+VS[jDZ>1n7Mi5B;Qj5]okT3
+!s100 I34]D?QL?H]Uic_9lPD^[1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Abehavioral
+R4
+R5
+R6
+DEx4 work 8 prsg_tcr 0 22 S[jDZ>1n7Mi5B;Qj5]okT3
+l21
+L17
+VZc:I?2AW0@linKbPP3=^70
+!s100 9J67mBaNl5FYhU;0RY3i22
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+vtc_fifo
+!s10a 1643786800
+!s110 1643790403
+!i10b 1
+!s100 29O4ZfF48oGj=kLim?Shj0
+IPLP7aX[3L<hnnnAdlaBPW2
+R16
+R0
+w1643786800
+8../../../../ctpreadout.ip_user_files/ip/tc_fifo/sim/tc_fifo.v
+F../../../../ctpreadout.ip_user_files/ip/tc_fifo/sim/tc_fifo.v
+R20
+R17
+r1
+!s85 0
+31
+!s108 1643790403.000000
+!s107 ../../../../ctpreadout.ip_user_files/ip/tc_fifo/sim/tc_fifo.v|
+!s90 -64|-incr|-work|xil_defaultlib|../../../../ctpreadout.ip_user_files/ip/tc_fifo/sim/tc_fifo.v|
+!i113 0
+R18
+R19
+Etc_statemachine
+Z42 w1652185866
+R2
+R3
+R4
+R5
+R6
+R0
+Z43 8../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/tc_statemachine.vhd
+Z44 F../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/tc_statemachine.vhd
+l0
+L18
+Vj1<96ZVXS;]2lWzNz]f7N0
+!s100 :5ooDidTLP:gT;BOjkjP[1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Artl
+R2
+R3
+R4
+R5
+R6
+DEx4 work 15 tc_statemachine 0 22 j1<96ZVXS;]2lWzNz]f7N0
+l209
+L70
+VU07?P;=^;MRLlZQIEK_Io0
+!s100 D9=QR`o?]bA8:aiJ>1[=d1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Etcr_tb
+Z45 w1652190358
+R29
+R2
+R3
+R4
+R5
+R6
+R0
+Z46 8../../../../Trigger_class_record/TCR_tb.vhd
+Z47 F../../../../Trigger_class_record/TCR_tb.vhd
+l0
+L42
+VWQ7_=O^HN@h:e8m3oS^SU2
+!s100 nfA2QETQb6G0CEB]i]F2[3
+R9
+33
+R10
+!i10b 1
+R11
+Z48 !s90 -64|-2008|-work|xil_defaultlib|../../../../Trigger_class_record/TCR_tb.vhd|
+Z49 !s107 ../../../../Trigger_class_record/TCR_tb.vhd|
+!i113 0
+Z50 o-2008 -work xil_defaultlib
+R15
+Abehavioral
+R29
+R2
+R3
+R4
+R5
+R6
+DEx4 work 6 tcr_tb 0 22 WQ7_=O^HN@h:e8m3oS^SU2
+l138
+L46
+VGhARz8=^IXfc[N?_FaGUB0
+!s100 h4gLCIV;`GO];U`]hZF0o1
+R9
+33
+R10
+!i10b 1
+R11
+R48
+R49
+!i113 0
+R50
+R15
+Ttcr_tb_opt
+!s110 1652272765
+VaeXEm62o4RCeSf?2Wb9[70
+04 6 10 work tcr_tb behavioral 1
+R32
+R33
+R19
+ntcr_tb_opt
+R34
+Etop_ir_statemachine
+Z51 w1643787641
+R4
+Z52 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z53 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R5
+R6
+R0
+Z54 8../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd
+Z55 F../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd
+l0
+L35
+V>joB;LBAfYNaadonnm_lo0
+!s100 cm80ljSg<jAX0iO3QQbhU2
+R9
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R14
+R15
+Abehavioral
+R4
+R52
+R53
+R5
+R6
+DEx4 work 19 top_ir_statemachine 0 22 >joB;LBAfYNaadonnm_lo0
+l250
+L90
+V9I54MY:EQM05VWN9:]o<41
+!s100 nPlM1Qhj]B``fQJDVX;O33
+R9
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R14
+R15
+Etop_tc_statemachine
+Z56 w1643787829
+R4
+R52
+R53
+R5
+R6
+R0
+Z57 8../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd
+Z58 F../../../../ctpreadout.srcs/sources_1/imports/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd
+l0
+L35
+VT42?73AFan^fIlD7f@9TJ3
+!s100 A72lfX_1:ig4:@:T0ZgEB2
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Abehavioral
+R4
+R52
+R53
+R5
+R6
+DEx4 work 19 top_tc_statemachine 0 22 T42?73AFan^fIlD7f@9TJ3
+l250
+L90
+V0b26gmL81_^:84?D8fI8]0
+!s100 zZzmeNgZWWFF>`TmkW>L]1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15

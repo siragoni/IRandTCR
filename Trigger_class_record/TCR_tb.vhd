@@ -75,7 +75,8 @@ architecture Behavioral of tcr_tb is
     signal tickpipe : std_logic_vector(6 downto 1);
 
     signal dv_o : std_logic := '0';
-
+    signal runpattern_rdh : std_logic_vector( 31 downto 0) := (others => '0');
+    signal TF_del2 : std_logic := '0';
 	
 component top_tc_statemachine is
   generic (
@@ -114,6 +115,8 @@ component top_tc_statemachine is
 --    bc_number_i               : in  std_logic_vector (11 downto 0); -- BC ID
     d_o                       : out std_logic_vector (79 downto 0); -- GBT data
     dv_o                      : out std_logic;                      -- GBT data flag
+--    runpattern_rdh            : in  std_logic_vector(31 downto 0);    
+   
     --------------------------------------------------------------------------------
     -- tcr start/stop
     --------------------------------------------------------------------------------
@@ -188,14 +191,17 @@ ctrl_tcr: process (CLK_0)
                    start_tcr_data_taking_i <= '1';
                 elsif (gbt_flag_s = '0' and gbt_rx_s(79 downto 0) = x"300000000000BEEFDEAD") then -- SWT word is when GBT bits 79:76 = 0x3
                    stop_tcr_data_taking_i <= '1';
+                elsif (TF_del2 = '1') then
+                   start_tcr_data_taking_i <= '0';   
                 else
-                   start_tcr_data_taking_i <= '0';
+--                   start_tcr_data_taking_i <= '0';
                    stop_tcr_data_taking_i <= '0';
-             end if;
+                end if;
+             elsif (TF_del2 = '1' and clk_en_s = '1') then
+                start_tcr_data_taking_i <= '0';   
              end if;
          end if;
          end process;
-
 
 
 --==============================
@@ -258,10 +264,13 @@ generate_HB_trigger: process(CLK_0,  generated_orbit)
 --            bc_number_i               => bc_number_s, -- BC ID
             d_o                       => gbt_connection, -- GBT data
             dv_o                      => dv_o,  
+--            runpattern_rdh            => runpattern_rdh,
+            
             --------------------------------------------------------------------------------
             -- tcr start/stop
             --------------------------------------------------------------------------------
-            start_tcr_data_taking_i   => start_tcr_data_taking_i,
+            start_tcr_data_taking_i   => start_tcr_data_taking_i and TF_del2,
+--            start_tcr_data_taking_i   => start_tcr_data_taking_i,
             stop_tcr_data_taking_i    => stop_tcr_data_taking_i,
             --------------------------------------------------------------------------------
             -- tcr state machine coders (same interface as tcr)
@@ -369,10 +378,16 @@ generate_HB_trigger: process(CLK_0,  generated_orbit)
 		    wait until CLK_0 = '1';
 --		    start_command <= '1'; -- assert SOx
 		    gbt_rx_s <= x"300000000000DEADBEEF";
---		    wait until CLK_0 = '1';
---		    start_command <= '0'; -- assert SOx
-    		wait for 130 ns;           --change time if needed
+		    wait for 130 ns;           --change time if needed
 		    gbt_rx_s <= (others => '0');
+		    wait for 200 ns;
+		    wait until CLK_0 = '1';
+		    TF_del2 <= '1';
+            wait for 23 ns;		    
+		    wait until CLK_0 = '1';
+		    TF_del2 <= '0';
+--    		wait for 130 ns;           --change time if needed
+--		    gbt_rx_s <= (others => '0');
 --    		wait for 130 ns;           --change time if needed
 --		    wait until CLK_0 = '0';
 --            data_s(0 downto 0) <= "1";

@@ -35,6 +35,7 @@ entity tc_statemachine is
     trg_i                     : in  std_logic_vector(119 downto 0);
     trg_mask_i                : in  std_logic_vector(31 downto 0);
     ctp_orbit                 : in  std_logic_vector(31 downto 0);
+    runpattern_rdh            : in  std_logic_vector(31 downto 0);    	   
     --------------------------------------------------------------------------------
     -- Control signals
     --------------------------------------------------------------------------------
@@ -82,7 +83,7 @@ architecture rtl of tc_statemachine is
   constant c_FEE_ID            : std_logic_vector(15 downto 0) := "0000" & "0001" & sn(7 downto 0);
   -- header size = 4 words x 80 bits / (8 bit/byte) = 40 bytes
   signal c_HEADER_SIZE         : std_logic_vector(7 downto 0)  := x"40";
-  signal c_DET_FIELD           : std_logic_vector(31 downto 0) := x"12345678"; -- originally x"00000000"
+  signal c_DET_FIELD           : std_logic_vector(31 downto 0) := x"6003"; -- originally x"00000000"
   signal c_PAR                 : std_logic_vector(15 downto 0) := x"0000";
   signal c_PRIORITY_BIT        : std_logic_vector(7 downto 0)  := x"00";
   constant c_SOURCE_ID         : std_logic_vector(7 downto 0)  := "00010001"; --> TRG is 17
@@ -174,6 +175,11 @@ architecture rtl of tc_statemachine is
 
   signal page_counter   : unsigned(15 downto 0) := (others => '0'); 
   signal helper_stopbit : std_logic := '0';
+  
+  
+  
+  signal runpattern_reg   : std_logic_vector(31 downto 0) := (others => '0');
+
 
   -- ===========================
   --  WHY
@@ -993,6 +999,24 @@ begin
   ev_cnt_o     <= std_logic_vector(u_ev_cnt);
   trgmisscnt_o <= std_logic_vector(trgmisscnt);
   
+  
+  
+  -------------------------------------------------------
+  -- Update run pattern data
+  -------------------------------------------------------
+
+  p_update_runpattern : process(clk_i)
+  begin
+    if rising_edge(clk_i) then
+      if clk_en_i = '1' then
+        runpattern_reg <= runpattern_rdh;
+      end if;
+    end if;
+  end process p_update_runpattern;
+
+  
+  
+  
   --------------------------------------------------------------------------------
   -- Register the output of the SM
   -- DATA conisists of the same 32 bit word repeated all over the GBT word
@@ -1029,7 +1053,8 @@ begin
 
           
         when SEND_RDH_WORD3 =>
-          d_o  <= c_ZERO(31 downto 0) & c_PAR & c_DET_FIELD;
+--          d_o  <= c_ZERO(31 downto 0) & c_PAR & c_DET_FIELD;
+          d_o  <= c_ZERO(31 downto 0) & c_PAR & runpattern_reg;
           dv_o <= '1';
           tcr_state_machine_codes_o(3 downto 0) <= "0101";
 

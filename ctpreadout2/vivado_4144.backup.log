@@ -1,0 +1,787 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Feb 10 19:48:15 2022
+# Process ID: 4144
+# Current directory: C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7148 C:\Users\Simone Ragoni\alice\IRandTCR\ctpreadout2\ctpreadout2.xpr
+# Log file: C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/vivado.log
+# Journal file: C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 775.301 ; gain = 173.867
+update_compile_order -fileset sources_1
+launch_simulation -install_path C:/questasim64_10.6c/win64
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'Questa' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-50] Using simulator executables from 'C:/questasim64_10.6c/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+INFO: [USF_Questa-11] File 'C:/Users/Simone Ragoni/questalib_106c/modelsim.ini' copied to run dir:'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [SIM-utils-54] Inspecting design source files for 'IR_tb' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/ir_fifo/ir_fifo.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/tc_fifo/tc_fifo.xml'
+INFO: [USF-Questa-107] Finding global include files...
+INFO: [USF-Questa-108] Finding include directories and verilog header directory paths...
+INFO: [USF-Questa-109] Fetching design files from 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {IR_tb_compile.do}
+# ** Warning: (vlib-34) Library already exists at "questa_lib/work".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+# QuestaSim-64 vmap 10.6c Lib Mapping Utility 2017.07 Jul 26 2017
+# vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 19:51:03 on Feb 10,2022
+# vlog -64 -incr -work xil_defaultlib ../../../../ctpreadout2.ip_user_files/ip/ir_fifo/sim/ir_fifo.v 
+# -- Skipping module ir_fifo
+# 
+# Top level modules:
+# 	ir_fifo
+# End time: 19:51:03 on Feb 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 19:51:03 on Feb 10,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Interaction_record_zerosuppr/ir_statemachine.vhd ../../../../../Interaction_record_zerosuppr/packer_ir2.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Interaction_record_zerosuppr/top_ir_statemachine.vhd ../../../../../IR_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity ir_statemachine
+# -- Compiling architecture rtl of ir_statemachine
+# ** Warning: ../../../../../Interaction_record_zerosuppr/ir_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# -- Compiling entity packer_ir2
+# -- Compiling architecture Behavioral of packer_ir2
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity top_ir_statemachine
+# -- Compiling architecture Behavioral of top_ir_statemachine
+# -- Loading package std_logic_textio
+# -- Compiling entity IR_tb
+# -- Compiling architecture Behavioral of IR_tb
+# End time: 19:51:03 on Feb 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 19:51:03 on Feb 10,2022
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 19:51:03 on Feb 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+INFO: [USF-Questa-69] 'compile' step finished in '1' seconds
+INFO: [USF-Questa-3] Questa::Elaborate design
+INFO: [USF-Questa-69] Executing 'ELABORATE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {IR_tb_elaborate.do}
+# QuestaSim-64 vopt 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 19:51:04 on Feb 10,2022
+# vopt "+acc=npr" -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib xil_defaultlib.IR_tb xil_defaultlib.glbl -o IR_tb_opt 
+# 
+# Top level modules:
+# 	IR_tb
+# 	glbl
+# 
+# Analyzing design...
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_textio
+# -- Loading entity IR_tb
+# -- Loading architecture Behavioral of IR_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity top_ir_statemachine
+# -- Loading architecture Behavioral of top_ir_statemachine
+# -- Loading entity prsg_tcr
+# -- Loading entity packer_ir2
+# -- Loading package vl_types
+# -- Loading entity ir_fifo
+# -- Loading entity buffer_fifo
+# -- Loading entity ir_statemachine
+# -- Loading architecture Behavioral of prsg_tcr
+# -- Loading architecture Behavioral of packer_ir2
+# -- Loading module ir_fifo
+# -- Loading architecture Behavioral of buffer_fifo
+# -- Loading architecture rtl of ir_statemachine
+# -- Loading module glbl
+# -- Loading architecture FIFO18E2_V of FIFO18E2
+# -- Loading package body VPKG
+# -- Loading architecture FIFO36E2_V of FIFO36E2
+# -- Loading architecture FIFO18E1_V of FIFO18E1
+# -- Loading entity FF18_INTERNAL_VHDL
+# -- Loading architecture FF18_INTERNAL_VHDL_V of FF18_INTERNAL_VHDL
+# -- Loading architecture FIFO36E1_V of FIFO36E1
+# -- Loading entity FF36_INTERNAL_VHDL
+# -- Loading architecture FF36_INTERNAL_VHDL_V of FF36_INTERNAL_VHDL
+# Incremental compilation check found 30 design-units (out of 33) may be reused.
+# Optimizing 3 design-units (inlining 1/3 module instances, 0/114 architecture instances):
+# -- Optimizing architecture rtl of ir_statemachine
+# -- Optimizing architecture Behavioral of IR_tb
+# -- Optimizing architecture Behavioral of top_ir_statemachine
+# Optimized design name is IR_tb_opt
+# End time: 19:51:05 on Feb 10,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+INFO: [USF-Questa-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-Questa-4] Questa::Simulate design
+INFO: [USF-Questa-69] Executing 'SIMULATE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Program launched (PID=5936)
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 843.918 ; gain = 0.000
+launch_simulation -install_path C:/questasim64_10.6c/win64
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'Questa' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-50] Using simulator executables from 'C:/questasim64_10.6c/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+INFO: [USF_Questa-11] File 'C:/Users/Simone Ragoni/questalib_106c/modelsim.ini' copied to run dir:'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [SIM-utils-54] Inspecting design source files for 'IR_tb' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/ir_fifo/ir_fifo.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/tc_fifo/tc_fifo.xml'
+INFO: [USF-Questa-107] Finding global include files...
+INFO: [USF-Questa-108] Finding include directories and verilog header directory paths...
+INFO: [USF-Questa-109] Fetching design files from 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {IR_tb_compile.do}
+# ** Warning: (vlib-34) Library already exists at "questa_lib/work".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+# QuestaSim-64 vmap 10.6c Lib Mapping Utility 2017.07 Jul 26 2017
+# vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:56:59 on Feb 11,2022
+# vlog -64 -incr -work xil_defaultlib ../../../../ctpreadout2.ip_user_files/ip/ir_fifo/sim/ir_fifo.v 
+# -- Skipping module ir_fifo
+# 
+# Top level modules:
+# 	ir_fifo
+# End time: 15:56:59 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:56:59 on Feb 11,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Interaction_record_zerosuppr/ir_statemachine.vhd ../../../../../Interaction_record_zerosuppr/packer_ir2.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Interaction_record_zerosuppr/top_ir_statemachine.vhd ../../../../../IR_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity ir_statemachine
+# -- Compiling architecture rtl of ir_statemachine
+# ** Warning: ../../../../../Interaction_record_zerosuppr/ir_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# -- Compiling entity packer_ir2
+# -- Compiling architecture Behavioral of packer_ir2
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity top_ir_statemachine
+# -- Compiling architecture Behavioral of top_ir_statemachine
+# -- Loading package std_logic_textio
+# -- Compiling entity IR_tb
+# -- Compiling architecture Behavioral of IR_tb
+# End time: 15:56:59 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:56:59 on Feb 11,2022
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 15:56:59 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+INFO: [USF-Questa-69] 'compile' step finished in '1' seconds
+INFO: [USF-Questa-3] Questa::Elaborate design
+INFO: [USF-Questa-69] Executing 'ELABORATE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {IR_tb_elaborate.do}
+# QuestaSim-64 vopt 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:57:00 on Feb 11,2022
+# vopt "+acc=npr" -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib xil_defaultlib.IR_tb xil_defaultlib.glbl -o IR_tb_opt 
+# 
+# Top level modules:
+# 	IR_tb
+# 	glbl
+# 
+# Analyzing design...
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_textio
+# -- Loading entity IR_tb
+# -- Loading architecture Behavioral of IR_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity top_ir_statemachine
+# -- Loading architecture Behavioral of top_ir_statemachine
+# -- Loading entity prsg_tcr
+# -- Loading entity packer_ir2
+# -- Loading package vl_types
+# -- Loading entity ir_fifo
+# -- Loading entity buffer_fifo
+# -- Loading entity ir_statemachine
+# -- Loading architecture Behavioral of prsg_tcr
+# -- Loading architecture Behavioral of packer_ir2
+# -- Loading module ir_fifo
+# -- Loading architecture Behavioral of buffer_fifo
+# -- Loading architecture rtl of ir_statemachine
+# -- Loading module glbl
+# -- Loading architecture FIFO18E2_V of FIFO18E2
+# -- Loading package body VPKG
+# -- Loading architecture FIFO36E2_V of FIFO36E2
+# -- Loading architecture FIFO18E1_V of FIFO18E1
+# -- Loading entity FF18_INTERNAL_VHDL
+# -- Loading architecture FF18_INTERNAL_VHDL_V of FF18_INTERNAL_VHDL
+# -- Loading architecture FIFO36E1_V of FIFO36E1
+# -- Loading entity FF36_INTERNAL_VHDL
+# -- Loading architecture FF36_INTERNAL_VHDL_V of FF36_INTERNAL_VHDL
+# Incremental compilation check found 30 design-units (out of 33) may be reused.
+# Optimizing 3 design-units (inlining 1/3 module instances, 0/114 architecture instances):
+# -- Optimizing architecture Behavioral of IR_tb
+# -- Optimizing architecture Behavioral of top_ir_statemachine
+# -- Optimizing architecture Behavioral of packer_ir2
+# Optimized design name is IR_tb_opt
+# End time: 15:57:01 on Feb 11,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+INFO: [USF-Questa-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-Questa-4] Questa::Simulate design
+INFO: [USF-Questa-69] Executing 'SIMULATE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Program launched (PID=4296)
+set_property top tcr_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/packer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/IR_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/packer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/IR_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/packer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/IR_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/packer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/IR_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/packer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/IR_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/Simone Ragoni/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd:]
+update_compile_order -fileset sim_1
+launch_simulation -install_path C:/questasim64_10.6c/win64
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'Questa' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-50] Using simulator executables from 'C:/questasim64_10.6c/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+INFO: [USF_Questa-11] File 'C:/Users/Simone Ragoni/questalib_106c/modelsim.ini' copied to run dir:'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [SIM-utils-54] Inspecting design source files for 'tcr_tb' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/ir_fifo/ir_fifo.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/tc_fifo/tc_fifo.xml'
+INFO: [USF-Questa-107] Finding global include files...
+INFO: [USF-Questa-108] Finding include directories and verilog header directory paths...
+INFO: [USF-Questa-109] Fetching design files from 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {tcr_tb_compile.do}
+# ** Warning: (vlib-34) Library already exists at "questa_lib/work".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+# QuestaSim-64 vmap 10.6c Lib Mapping Utility 2017.07 Jul 26 2017
+# vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:02:44 on Feb 11,2022
+# vlog -64 -incr -work xil_defaultlib ../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v 
+# -- Compiling module tc_fifo
+# 
+# Top level modules:
+# 	tc_fifo
+# End time: 16:02:44 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:02:44 on Feb 11,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigger_class_record/packer.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Trigger_class_record/tc_statemachine.vhd ../../../../../Trigger_class_record/top_tc_statemachine.vhd ../../../../../Trigger_class_record/TCR_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity packer
+# -- Compiling architecture Behavioral of packer
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Compiling entity tc_statemachine
+# -- Compiling architecture rtl of tc_statemachine
+# ** Warning: ../../../../../Trigger_class_record/tc_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity top_tc_statemachine
+# -- Compiling architecture Behavioral of top_tc_statemachine
+# -- Loading package std_logic_textio
+# -- Compiling entity tcr_tb
+# -- Compiling architecture Behavioral of tcr_tb
+# End time: 16:02:45 on Feb 11,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:02:45 on Feb 11,2022
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 16:02:45 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+INFO: [USF-Questa-69] 'compile' step finished in '1' seconds
+INFO: [USF-Questa-3] Questa::Elaborate design
+INFO: [USF-Questa-69] Executing 'ELABORATE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {tcr_tb_elaborate.do}
+# ** Error: QuestaSim-64 vopt 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:02:46 on Feb 11,2022
+# vopt "+acc=npr" -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib xil_defaultlib.tcr_tb xil_defaultlib.glbl -o tcr_tb_opt 
+# 
+# Top level modules:
+# 	tcr_tb
+# 	glbl
+# 
+# Analyzing design...
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_textio
+# -- Loading entity tcr_tb
+# -- Loading architecture Behavioral of tcr_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity top_tc_statemachine
+# ** Error (suppressible): ../../../../../Trigger_class_record/TCR_tb.vhd(274): (vopt-1130) Port "runpattern_rdh" of entity "top_tc_statemachine" is not in the component being instantiated.
+# -- Loading architecture Behavioral of top_tc_statemachine
+# -- Loading entity prsg_tcr
+# -- Loading entity packer
+# -- Loading module tc_fifo
+# -- Loading package vl_types
+# -- Loading entity tc_fifo
+# -- Loading entity buffer_fifo
+# -- Loading entity tc_statemachine
+# -- Loading architecture Behavioral of prsg_tcr
+# -- Loading architecture Behavioral of packer
+# -- Loading architecture Behavioral of buffer_fifo
+# -- Loading architecture rtl of tc_statemachine
+# -- Loading module glbl
+# Optimization failed
+# End time: 16:02:46 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# child process exited abnormally
+# Error in macro ./tcr_tb_elaborate.do line 9
+# QuestaSim-64 vopt 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 16:02:46 on Feb 11,2022
+# vopt "+acc=npr" -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib xil_defaultlib.tcr_tb xil_defaultlib.glbl -o tcr_tb_opt 
+# 
+# Top level modules:
+# 	tcr_tb
+# 	glbl
+# 
+# Analyzing design...
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_textio
+# -- Loading entity tcr_tb
+# -- Loading architecture Behavioral of tcr_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity top_tc_statemachine
+# ** Error (suppressible): ../../../../../Trigger_class_record/TCR_tb.vhd(274): (vopt-1130) Port "runpattern_rdh" of entity "top_tc_statemachine" is not in the component being instantiated.
+# -- Loading architecture Behavioral of top_tc_statemachine
+# -- Loading entity prsg_tcr
+# -- Loading entity packer
+# -- Loading module tc_fifo
+# -- Loading package vl_types
+# -- Loading entity tc_fifo
+# -- Loading entity buffer_fifo
+# -- Loading entity tc_statemachine
+# -- Loading architecture Behavioral of prsg_tcr
+# -- Loading architecture Behavioral of packer
+# -- Loading architecture Behavioral of buffer_fifo
+# -- Loading architecture rtl of tc_statemachine
+# -- Loading module glbl
+# Optimization failed
+# End time: 16:02:46 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# child process exited abnormally
+#     while executing
+# "exec <nul: {C:\questasim64_10.6c\win64\vopt.EXE} -64 +acc=npr -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -..."
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 47)
+#     invoked from within
+# "C:\\questasim64_10.6c\\win64\\vopt -64 +acc=npr -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xi..."
+QuestaSim> INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 929.527 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 929.527 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation -install_path C:/questasim64_10.6c/win64
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'Questa' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-50] Using simulator executables from 'C:/questasim64_10.6c/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+INFO: [USF_Questa-11] File 'C:/Users/Simone Ragoni/questalib_106c/modelsim.ini' copied to run dir:'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [SIM-utils-54] Inspecting design source files for 'tcr_tb' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/ir_fifo/ir_fifo.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/tc_fifo/tc_fifo.xml'
+INFO: [USF-Questa-107] Finding global include files...
+INFO: [USF-Questa-108] Finding include directories and verilog header directory paths...
+INFO: [USF-Questa-109] Fetching design files from 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {tcr_tb_compile.do}
+# ** Warning: (vlib-34) Library already exists at "questa_lib/work".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+# QuestaSim-64 vmap 10.6c Lib Mapping Utility 2017.07 Jul 26 2017
+# vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:13:17 on Feb 11,2022
+# vlog -64 -incr -work xil_defaultlib ../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v 
+# -- Skipping module tc_fifo
+# 
+# Top level modules:
+# 	tc_fifo
+# End time: 21:13:17 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:13:17 on Feb 11,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigger_class_record/packer.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Trigger_class_record/tc_statemachine.vhd ../../../../../Trigger_class_record/top_tc_statemachine.vhd ../../../../../Trigger_class_record/TCR_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity packer
+# -- Compiling architecture Behavioral of packer
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Compiling entity tc_statemachine
+# -- Compiling architecture rtl of tc_statemachine
+# ** Warning: ../../../../../Trigger_class_record/tc_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity top_tc_statemachine
+# -- Compiling architecture Behavioral of top_tc_statemachine
+# -- Loading package std_logic_textio
+# -- Compiling entity tcr_tb
+# -- Compiling architecture Behavioral of tcr_tb
+# ** Error: ../../../../../Trigger_class_record/TCR_tb.vhd(277): (vcom-1035) Formal port "runpattern_rdh" has OPEN or no actual associated with it.
+# ** Error: ../../../../../Trigger_class_record/TCR_tb.vhd(456): VHDL Compiler exiting
+# End time: 21:13:18 on Feb 11,2022, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 2
+# child process exited abnormally
+# Error in macro ./tcr_tb_compile.do line 26
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:13:17 on Feb 11,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigger_class_record/packer.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Trigger_class_record/tc_statemachine.vhd ../../../../../Trigger_class_record/top_tc_statemachine.vhd ../../../../../Trigger_class_record/TCR_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity packer
+# -- Compiling architecture Behavioral of packer
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Compiling entity tc_statemachine
+# -- Compiling architecture rtl of tc_statemachine
+# ** Warning: ../../../../../Trigger_class_record/tc_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity top_tc_statemachine
+# -- Compiling architecture Behavioral of top_tc_statemachine
+# -- Loading package std_logic_textio
+# -- Compiling entity tcr_tb
+# -- Compiling architecture Behavioral of tcr_tb
+# ** Error: ../../../../../Trigger_class_record/TCR_tb.vhd(277): (vcom-1035) Formal port "runpattern_rdh" has OPEN or no actual associated with it.
+# ** Error: ../../../../../Trigger_class_record/TCR_tb.vhd(456): VHDL Compiler exiting
+# End time: 21:13:18 on Feb 11,2022, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 2
+# child process exited abnormally
+#     while executing
+# "exec <nul: {C:\questasim64_10.6c\win64\vcom.EXE} -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigg..."
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 47)
+#     invoked from within
+# "C:\\questasim64_10.6c\\win64\\vcom -64 -93 -work xil_defaultlib  \
+# "../../../../../Trigger_class_record/buffer_fifo.vhd" \
+# "../../../../../Trigger_cla..."
+QuestaSim> INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 929.527 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 929.527 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation -install_path C:/questasim64_10.6c/win64
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'Questa' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-50] Using simulator executables from 'C:/questasim64_10.6c/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+INFO: [USF_Questa-11] File 'C:/Users/Simone Ragoni/questalib_106c/modelsim.ini' copied to run dir:'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+INFO: [SIM-utils-54] Inspecting design source files for 'tcr_tb' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/ir_fifo/ir_fifo.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Simone Ragoni/alice/CTPv15/ctp3-fw-ctp_logic/IP_xcku060_2e/tc_fifo/tc_fifo.xml'
+INFO: [USF-Questa-107] Finding global include files...
+INFO: [USF-Questa-108] Finding include directories and verilog header directory paths...
+INFO: [USF-Questa-109] Fetching design files from 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {tcr_tb_compile.do}
+# ** Warning: (vlib-34) Library already exists at "questa_lib/work".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+# ** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+# QuestaSim-64 vmap 10.6c Lib Mapping Utility 2017.07 Jul 26 2017
+# vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:14:36 on Feb 11,2022
+# vlog -64 -incr -work xil_defaultlib ../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v 
+# -- Skipping module tc_fifo
+# 
+# Top level modules:
+# 	tc_fifo
+# End time: 21:14:36 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:14:36 on Feb 11,2022
+# vcom -64 -93 -work xil_defaultlib ../../../../../Trigger_class_record/buffer_fifo.vhd ../../../../../Trigger_class_record/packer.vhd ../../../../../Trigger_class_record/prsg_tcr.vhd ../../../../../Trigger_class_record/tc_statemachine.vhd ../../../../../Trigger_class_record/top_tc_statemachine.vhd ../../../../../Trigger_class_record/TCR_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity buffer_fifo
+# -- Compiling architecture Behavioral of buffer_fifo
+# -- Compiling entity packer
+# -- Compiling architecture Behavioral of packer
+# -- Compiling entity prsg_tcr
+# -- Compiling architecture Behavioral of prsg_tcr
+# -- Compiling entity tc_statemachine
+# -- Compiling architecture rtl of tc_statemachine
+# ** Warning: ../../../../../Trigger_class_record/tc_statemachine.vhd(83): (vcom-1013) Initial value of "c_FEE_ID" depends on value of signal "sn".
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity top_tc_statemachine
+# -- Compiling architecture Behavioral of top_tc_statemachine
+# -- Loading package std_logic_textio
+# -- Compiling entity tcr_tb
+# -- Compiling architecture Behavioral of tcr_tb
+# End time: 21:14:36 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:14:36 on Feb 11,2022
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 21:14:36 on Feb 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+INFO: [USF-Questa-69] 'compile' step finished in '1' seconds
+INFO: [USF-Questa-3] Questa::Elaborate design
+INFO: [USF-Questa-69] Executing 'ELABORATE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Reading C:/questasim64_10.6c/tcl/vsim/pref.tcl
+
+# 10.6c
+
+# do {tcr_tb_elaborate.do}
+# QuestaSim-64 vopt 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 21:14:37 on Feb 11,2022
+# vopt "+acc=npr" -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib xil_defaultlib.tcr_tb xil_defaultlib.glbl -o tcr_tb_opt 
+# 
+# Top level modules:
+# 	tcr_tb
+# 	glbl
+# 
+# Analyzing design...
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_textio
+# -- Loading entity tcr_tb
+# -- Loading architecture Behavioral of tcr_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity top_tc_statemachine
+# -- Loading architecture Behavioral of top_tc_statemachine
+# -- Loading entity prsg_tcr
+# -- Loading entity packer
+# -- Loading package vl_types
+# -- Loading entity tc_fifo
+# -- Loading entity buffer_fifo
+# -- Loading entity tc_statemachine
+# -- Loading architecture Behavioral of prsg_tcr
+# -- Loading architecture Behavioral of packer
+# -- Loading module tc_fifo
+# -- Loading architecture Behavioral of buffer_fifo
+# -- Loading architecture rtl of tc_statemachine
+# -- Loading module glbl
+# -- Loading architecture FIFO18E2_V of FIFO18E2
+# -- Loading package body VPKG
+# -- Loading architecture FIFO36E2_V of FIFO36E2
+# -- Loading architecture FIFO18E1_V of FIFO18E1
+# -- Loading entity FF18_INTERNAL_VHDL
+# -- Loading architecture FF18_INTERNAL_VHDL_V of FF18_INTERNAL_VHDL
+# -- Loading architecture FIFO36E1_V of FIFO36E1
+# -- Loading entity FF36_INTERNAL_VHDL
+# -- Loading architecture FF36_INTERNAL_VHDL_V of FF36_INTERNAL_VHDL
+# Optimizing 33 design-units (inlining 1/3 module instances, 0/114 architecture instances):
+# -- Optimizing module tc_fifo(fast)
+# -- Optimizing module glbl(fast)
+# -- Optimizing architecture FF18_INTERNAL_VHDL_V of FF18_INTERNAL_VHDL
+# -- Optimizing architecture FF36_INTERNAL_VHDL_V of FF36_INTERNAL_VHDL
+# -- Optimizing architecture FIFO36E2_V of FIFO36E2
+# -- Optimizing architecture FIFO18E2_V of FIFO18E2
+# -- Optimizing package body VPKG
+# -- Optimizing package VPKG
+# -- Optimizing package VCOMPONENTS
+# -- Optimizing architecture rtl of tc_statemachine
+# -- Optimizing architecture Behavioral of packer
+# -- Optimizing architecture FIFO18E1_V of FIFO18E1
+# -- Optimizing architecture FIFO36E1_V of FIFO36E1
+# -- Optimizing architecture Behavioral of tcr_tb
+# -- Optimizing architecture Behavioral of top_tc_statemachine
+# -- Optimizing architecture Behavioral of buffer_fifo
+# -- Optimizing architecture Behavioral of prsg_tcr
+# Optimized design name is tcr_tb_opt
+# End time: 21:14:40 on Feb 11,2022, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+INFO: [USF-Questa-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-Questa-4] Questa::Simulate design
+INFO: [USF-Questa-69] Executing 'SIMULATE' step in 'C:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa'
+Program launched (PID=7228)
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 929.527 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  3 11:37:20 2022...

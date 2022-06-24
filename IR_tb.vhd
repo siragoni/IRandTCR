@@ -74,6 +74,7 @@ architecture Behavioral of IR_tb is
     signal tickpipe : std_logic_vector(6 downto 1);
 
     signal dv_o : std_logic := '0';
+    signal runpattern_rdh : std_logic_vector( 31 downto 0) := (others => '0');
 
 	
 component top_ir_statemachine is
@@ -113,6 +114,7 @@ component top_ir_statemachine is
 --    bc_number_i               : in  std_logic_vector (11 downto 0); -- BC ID
     d_o                       : out std_logic_vector (79 downto 0); -- GBT data
     dv_o                      : out std_logic;                      -- GBT data flag
+    runpattern_rdh            : in  std_logic_vector(31 downto 0);    
     --------------------------------------------------------------------------------
     -- ir start/stop
     --------------------------------------------------------------------------------
@@ -233,6 +235,7 @@ ctrl_ir: process (CLK_0)
 --            bc_number_i               => bc_number_s, -- BC ID
             d_o                       => gbt_connection, -- GBT data
             dv_o                      => dv_o,  
+            runpattern_rdh            => runpattern_rdh,
             --------------------------------------------------------------------------------
             -- ir start/stop
             --------------------------------------------------------------------------------

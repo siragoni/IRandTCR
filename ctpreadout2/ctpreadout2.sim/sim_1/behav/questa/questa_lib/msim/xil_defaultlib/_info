@@ -1,0 +1,545 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Simone Ragoni/alice/IRandTCR/ctpreadout2/ctpreadout2.sim/sim_1/behav/questa
+Ebuffer_fifo
+Z1 w1647964382
+Z2 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z3 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8../../../../../Trigger_class_record/buffer_fifo.vhd
+Z8 F../../../../../Trigger_class_record/buffer_fifo.vhd
+l0
+L37
+VigXXoHZRbJO?Q]JTg:jz82
+!s100 lDcBc>I^8boOLYFg:dIBi3
+Z9 OL;C;10.6c;65
+31
+Z10 !s110 1652105775
+!i10b 1
+Z11 !s108 1652105775.000000
+Z12 !s90 -64|-93|-work|xil_defaultlib|../../../../../Trigger_class_record/buffer_fifo.vhd|../../../../../Trigger_class_record/packer.vhd|../../../../../Trigger_class_record/prsg_tcr.vhd|../../../../../Trigger_class_record/tc_statemachine.vhd|../../../../../Trigger_class_record/top_tc_statemachine.vhd|
+Z13 !s107 ../../../../../Trigger_class_record/top_tc_statemachine.vhd|../../../../../Trigger_class_record/tc_statemachine.vhd|../../../../../Trigger_class_record/prsg_tcr.vhd|../../../../../Trigger_class_record/packer.vhd|../../../../../Trigger_class_record/buffer_fifo.vhd|
+!i113 0
+Z14 o-93 -work xil_defaultlib
+Z15 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+Z16 DEx4 work 11 buffer_fifo 0 22 igXXoHZRbJO?Q]JTg:jz82
+l54
+L49
+Z17 V6=e4OkdcIF:H?7OFd3fhS3
+Z18 !s100 WL2M3>Tm;^_87z5ocLO:M2
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+vglbl
+Z19 !s110 1644610476
+!i10b 1
+!s100 JWZ^meD<P7inSF0<1SiO32
+IAl?5;D^:bf?I5A^M>WzmU1
+Z20 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1544155481
+8glbl.v
+Fglbl.v
+L0 6
+Z21 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z22 !s108 1644610476.000000
+!s107 glbl.v|
+!s90 -work|xil_defaultlib|glbl.v|
+!i113 0
+Z23 o-work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z24 tCvgOpt 0
+vir_fifo
+!s10a 1639388802
+!s110 1644307794
+!i10b 1
+!s100 WAAU2?@2^Fa4COU]Ze]Tl3
+I8[jY0BHDFI]g=i8zf0neK2
+R20
+R0
+w1639388802
+8../../../../ctpreadout2.ip_user_files/ip/ir_fifo/sim/ir_fifo.v
+F../../../../ctpreadout2.ip_user_files/ip/ir_fifo/sim/ir_fifo.v
+Z25 L0 56
+R21
+r1
+!s85 0
+31
+!s108 1644307794.000000
+!s107 ../../../../ctpreadout2.ip_user_files/ip/ir_fifo/sim/ir_fifo.v|
+!s90 -64|-incr|-work|xil_defaultlib|../../../../ctpreadout2.ip_user_files/ip/ir_fifo/sim/ir_fifo.v|
+!i113 0
+R23
+R24
+Eir_statemachine
+Z26 w1644344968
+R2
+R3
+R4
+R5
+R6
+R0
+Z27 8../../../../../Interaction_record_zerosuppr/ir_statemachine.vhd
+Z28 F../../../../../Interaction_record_zerosuppr/ir_statemachine.vhd
+l0
+L18
+Vl_GOJFjfJ`2ScdgzXL]>@3
+!s100 ZUo7g5Y5;hZnOG<QO?Q832
+R9
+31
+Z29 !s110 1644591419
+!i10b 1
+Z30 !s108 1644591419.000000
+Z31 !s90 -64|-93|-work|xil_defaultlib|../../../../../Trigger_class_record/buffer_fifo.vhd|../../../../../Interaction_record_zerosuppr/ir_statemachine.vhd|../../../../../Interaction_record_zerosuppr/packer_ir2.vhd|../../../../../Trigger_class_record/prsg_tcr.vhd|../../../../../Interaction_record_zerosuppr/top_ir_statemachine.vhd|../../../../../IR_tb.vhd|
+Z32 !s107 ../../../../../IR_tb.vhd|../../../../../Interaction_record_zerosuppr/top_ir_statemachine.vhd|../../../../../Trigger_class_record/prsg_tcr.vhd|../../../../../Interaction_record_zerosuppr/packer_ir2.vhd|../../../../../Interaction_record_zerosuppr/ir_statemachine.vhd|../../../../../Trigger_class_record/buffer_fifo.vhd|
+!i113 0
+R14
+R15
+Artl
+R2
+R3
+R4
+R5
+R6
+DEx4 work 15 ir_statemachine 0 22 l_GOJFjfJ`2ScdgzXL]>@3
+l213
+L71
+V:Q1i6nO<0zkP:@B<jj4k<1
+!s100 e`jBCnYV7YhbELTU>RYQJ1
+R9
+31
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+Eir_tb
+Z33 w1644519054
+Z34 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R2
+R3
+R4
+R5
+R6
+R0
+Z35 8../../../../../IR_tb.vhd
+Z36 F../../../../../IR_tb.vhd
+l0
+L42
+V^CM7c8iFJYi3=6ocBTEJg0
+!s100 OMWj[h1h;QSRIm@l0kZ_92
+R9
+31
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+Abehavioral
+R34
+R2
+R3
+R4
+R5
+R6
+DEx4 work 5 ir_tb 0 22 ^CM7c8iFJYi3=6ocBTEJg0
+l136
+L46
+Vi8l4Mz2nJ?NGi>dgH5]nM2
+!s100 ;cV_32:Nao=LJb4YY1KZS3
+R9
+31
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+TIR_tb_opt
+!s110 1644591421
+V0WDc`@ehCbWeMkR:MjDF31
+04 5 10 work ir_tb behavioral 1
+Z37 04 4 4 work glbl fast 0
+Z38 o+acc=npr -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib
+R24
+n@i@r_tb_opt
+Z39 OL;O;10.6c;65
+R0
+Epacker
+R1
+R2
+R3
+R4
+R5
+R6
+R0
+Z40 8../../../../../Trigger_class_record/packer.vhd
+Z41 F../../../../../Trigger_class_record/packer.vhd
+l0
+L37
+V:zHIiMn3aW9OHK^diE?:f1
+!s100 Y`<O=JRX6AS8712W7mi]22
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+Z42 DEx4 work 6 packer 0 22 :zHIiMn3aW9OHK^diE?:f1
+l69
+L56
+Z43 V5n`fQ1?Bk5hnmiC^lBCl>1
+Z44 !s100 z`7Qg:WQMNocnFekL2G8n3
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Epacker_ir2
+Z45 w1644591366
+R2
+R3
+R4
+R5
+R6
+R0
+Z46 8../../../../../Interaction_record_zerosuppr/packer_ir2.vhd
+Z47 F../../../../../Interaction_record_zerosuppr/packer_ir2.vhd
+l0
+L37
+VzF^KUFT7_@nkHW<8ea<4m3
+!s100 OF9f:Q3zaGFPHZ[_<e4Ug0
+R9
+31
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 packer_ir2 0 22 zF^KUFT7_@nkHW<8ea<4m3
+l68
+L54
+Vo8DNQ0hHfQAn>?RmA>gCo1
+!s100 WAzXaX9I1]__H==14jR8G3
+R9
+31
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+Eprsg_tcr
+R1
+R4
+R5
+R6
+R0
+Z48 8../../../../../Trigger_class_record/prsg_tcr.vhd
+Z49 F../../../../../Trigger_class_record/prsg_tcr.vhd
+l0
+L7
+VS[jDZ>1n7Mi5B;Qj5]okT3
+!s100 I34]D?QL?H]Uic_9lPD^[1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Abehavioral
+R4
+R5
+R6
+Z50 DEx4 work 8 prsg_tcr 0 22 S[jDZ>1n7Mi5B;Qj5]okT3
+l21
+L17
+Z51 VZc:I?2AW0@linKbPP3=^70
+Z52 !s100 9J67mBaNl5FYhU;0RY3i22
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+vtc_fifo
+!s10a 1639388708
+!s110 1644591764
+!i10b 1
+!s100 29O4ZfF48oGj=kLim?Shj0
+I@aU7m^dL0jDQAe;?oZzE73
+R20
+R0
+w1639388708
+8../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v
+F../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v
+R25
+R21
+r1
+!s85 0
+31
+!s108 1644591764.000000
+!s107 ../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v|
+!s90 -64|-incr|-work|xil_defaultlib|../../../../ctpreadout2.ip_user_files/ip/tc_fifo/sim/tc_fifo.v|
+!i113 0
+R23
+R24
+Etc_statemachine
+Z53 w1647964766
+R2
+R3
+R4
+R5
+R6
+R0
+Z54 8../../../../../Trigger_class_record/tc_statemachine.vhd
+Z55 F../../../../../Trigger_class_record/tc_statemachine.vhd
+l0
+L18
+V3kjXa4b3=LS@gEHHFoK8F1
+!s100 :bLNeOoRUnA:cfhZjJNcQ2
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Artl
+R2
+R3
+R4
+R5
+R6
+DEx4 work 15 tc_statemachine 0 22 3kjXa4b3=LS@gEHHFoK8F1
+l215
+L71
+VI@QOJ^ZPR=z9al6c]cdNc2
+!s100 MZHlTc7F0@ebN[fS<H<fa3
+R9
+31
+R19
+!i10b 1
+R22
+Z56 !s90 -64|-93|-work|xil_defaultlib|../../../../../Trigger_class_record/buffer_fifo.vhd|../../../../../Trigger_class_record/packer.vhd|../../../../../Trigger_class_record/prsg_tcr.vhd|../../../../../Trigger_class_record/tc_statemachine.vhd|../../../../../Trigger_class_record/top_tc_statemachine.vhd|../../../../../Trigger_class_record/TCR_tb.vhd|
+Z57 !s107 ../../../../../Trigger_class_record/TCR_tb.vhd|../../../../../Trigger_class_record/top_tc_statemachine.vhd|../../../../../Trigger_class_record/tc_statemachine.vhd|../../../../../Trigger_class_record/prsg_tcr.vhd|../../../../../Trigger_class_record/packer.vhd|../../../../../Trigger_class_record/buffer_fifo.vhd|
+!i113 0
+R14
+R15
+Etcr_tb
+Z58 w1644610457
+R34
+R2
+R3
+R4
+R5
+R6
+R0
+Z59 8../../../../../Trigger_class_record/TCR_tb.vhd
+Z60 F../../../../../Trigger_class_record/TCR_tb.vhd
+l0
+L42
+V=k?n0iXoGIe?2AfD9PZeE0
+!s100 nfA2QETQb6G0CEB]i]F2[3
+R9
+31
+R19
+!i10b 1
+R22
+R56
+R57
+!i113 0
+R14
+R15
+Abehavioral
+R34
+R2
+R3
+R4
+R5
+R6
+DEx4 work 6 tcr_tb 0 22 =k?n0iXoGIe?2AfD9PZeE0
+l138
+L46
+ViMmc:Gk^BR]]ViC5^7N[:2
+!s100 aHO[VEU4S^>DI5k?Egi0M3
+R9
+31
+R19
+!i10b 1
+R22
+R56
+R57
+!i113 0
+R14
+R15
+Ttcr_tb_opt
+!s110 1644610478
+V4Ne2gOhK3EC2geC<0dmZc1
+04 6 10 work tcr_tb behavioral 1
+R37
+R38
+R24
+ntcr_tb_opt
+R39
+R0
+Etop_ir_statemachine
+Z61 w1644334020
+R4
+Z62 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z63 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R5
+R6
+R0
+Z64 8../../../../../Interaction_record_zerosuppr/top_ir_statemachine.vhd
+Z65 F../../../../../Interaction_record_zerosuppr/top_ir_statemachine.vhd
+l0
+L35
+VZFFG8LZG6jCTJI^b2BcLG1
+!s100 :4_`:@^OL[P`4?_^7]C003
+R9
+31
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+Abehavioral
+R4
+R62
+R63
+R5
+R6
+DEx4 work 19 top_ir_statemachine 0 22 ZFFG8LZG6jCTJI^b2BcLG1
+l252
+L91
+VYN`>DVl30OKG[BT5zOi@o0
+!s100 49WJ6M?5ko[1<NPE1e:KI0
+R9
+31
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+Etop_tc_statemachine
+Z66 w1644333997
+R4
+R62
+R63
+R5
+R6
+R0
+Z67 8../../../../../Trigger_class_record/top_tc_statemachine.vhd
+Z68 F../../../../../Trigger_class_record/top_tc_statemachine.vhd
+l0
+L35
+V3`N_<Z5BU7oNa`iCb^KUf2
+!s100 jN9SZAnZDJZXBD41;NB<E0
+R9
+31
+R19
+!i10b 1
+R22
+R56
+R57
+!i113 0
+R14
+R15
+Abehavioral
+R4
+R62
+R63
+R5
+R6
+DEx4 work 19 top_tc_statemachine 0 22 3`N_<Z5BU7oNa`iCb^KUf2
+l252
+L91
+VBO6Z;8LNA_jdR`?0Q;f^G0
+!s100 YidQa]TOfBk`dgH`gz[Li0
+R9
+31
+R19
+!i10b 1
+R22
+R56
+R57
+!i113 0
+R14
+R15

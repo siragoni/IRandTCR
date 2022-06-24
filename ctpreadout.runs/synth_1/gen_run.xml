@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcku060-ffva1156-2-e" LaunchTime="1652185871">
+  <File Type="PA-TCL" Name="ctpreadout.tcl"/>
+  <File Type="REPORTS-TCL" Name="ctpreadout_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ctpreadout.vds"/>
+  <File Type="RDS-UTIL" Name="ctpreadout_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ctpreadout_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ctpreadout.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../WholeCTPfromGitLab/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt/dc_fifo_gbt2olt.xci"/>
+        <Attr Name="ImportTime" Val="1643726380"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/Trigger_class_record/buffer_fifo.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Trigger_class_record/buffer_fifo.vhd"/>
+        <Attr Name="ImportTime" Val="1643786377"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/xilinx_ku/xlx_ku_gbt_bank_package.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/xilinx_ku/xlx_ku_gbt_bank_package.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_bank_package.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_bank_package.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_bank_package_itsmft.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_bank_package_itsmft.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/exampleDsgn_package.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/exampleDsgn_package.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/exampleDsgn_package_itsmft.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/exampleDsgn_package_itsmft.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/ir_statemachine.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Interaction_record_zerosuppr/ir_statemachine.vhd"/>
+        <Attr Name="ImportTime" Val="1643786368"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/Trigger_class_record/packer.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Trigger_class_record/packer.vhd"/>
+        <Attr Name="ImportTime" Val="1643786377"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/packer_ir2.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Interaction_record_zerosuppr/packer_ir2.vhd"/>
+        <Attr Name="ImportTime" Val="1643786368"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/Trigger_class_record/prsg_tcr.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Trigger_class_record/prsg_tcr.vhd"/>
+        <Attr Name="ImportTime" Val="1643786377"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/Trigger_class_record/tc_statemachine.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Trigger_class_record/tc_statemachine.vhd"/>
+        <Attr Name="ImportTime" Val="1643786377"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/Interaction_record_zerosuppr/top_ir_statemachine.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Interaction_record_zerosuppr/top_ir_statemachine.vhd"/>
+        <Attr Name="ImportTime" Val="1643786368"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/Trigger_class_record/top_tc_statemachine.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Trigger_class_record/top_tc_statemachine.vhd"/>
+        <Attr Name="ImportTime" Val="1643786377"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/alice/IRandTCR/ctpreadout.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="ImportPath" Val="$PPRDIR/ctpreadout.vhd"/>
+        <Attr Name="ImportTime" Val="1643786457"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/dc_fifo_gbt2olt.xcix">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../WholeCTPfromGitLab/ctp3-fw-ctp_logic/IP_xcku060_2e/dc_fifo_gbt2olt.xcix"/>
+        <Attr Name="ImportTime" Val="1643730078"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_descrambler_21bit.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_descrambler_21bit.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/xilinx_kultrascale/core_sources/gbt_tx_frameclk_phalgnr/phaligner_mmcm_controller.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/gbt_tx_frameclk_phalgnr/phaligner_mmcm_controller.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_gearbox_latopt.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_gearbox_latopt.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/xilinx_ku/mgt/xlx_ku_mgt.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/xilinx_ku/mgt/xlx_ku_mgt.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/gbt_pattern_matchflag.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/gbt_pattern_matchflag.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/CountOnes.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/CountOnes.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_encoder_gbtframe_intlver.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_encoder_gbtframe_intlver.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_scrambler_16bit.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_scrambler_16bit.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/xilinx_kultrascale/core_sources/gbt_rx_frameclk_pll.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/gbt_rx_frameclk_pll.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_gearbox_std_rdctrl.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_gearbox_std_rdctrl.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/xilinx_ku/gbt_tx/xlx_ku_gbt_tx_gearbox_std_dpram.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/xilinx_ku/gbt_tx/xlx_ku_gbt_tx_gearbox_std_dpram.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/rxframeclk_phalgnr/gbt_rx_frameclk_phalgnr.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/rxframeclk_phalgnr/gbt_rx_frameclk_phalgnr.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_gearbox_std.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_gearbox_std.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_scrambler_21bit.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_scrambler_21bit.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/mgt/mgt_framealigner_pattsearch.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/mgt/mgt_framealigner_pattsearch.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/clock_divider.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/clock_divider.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/rxframeclk_phalgnr/phaligner_phase_computing.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/rxframeclk_phalgnr/phaligner_phase_computing.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/IPb_gbt_slave.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/IPb_gbt_slave.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_syndrom.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_syndrom.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_top_itsmft.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_top_itsmft.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_descrambler_16bit.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_descrambler_16bit.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/pattern_matchflag_delaymeas.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/pattern_matchflag_delaymeas.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/xilinx_kultrascale/core_sources/xlx_ku_reset.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/xlx_ku_reset.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/gbt_pattern_generator.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/gbt_pattern_generator.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/xilinx_kultrascale/core_sources/gbt_tx_frameclk_phalgnr/xlx_ku_tx_phaligner.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/gbt_tx_frameclk_phalgnr/xlx_ku_tx_phaligner.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_deintlver.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_deintlver.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/xilinx_ku/mgt/xlx_ku_mgt_ip_reset_synchronizer.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/xilinx_ku/mgt/xlx_ku_mgt_ip_reset_synchronizer.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_lmbddet.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_lmbddet.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_rs2errcor.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_rs2errcor.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_elpeval.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_elpeval.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/xilinx_ku/gbt_rx/xlx_ku_gbt_rx_gearbox_std_dpram.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/xilinx_ku/gbt_rx/xlx_ku_gbt_rx_gearbox_std_dpram.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_top.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_top.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_bank.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_bank.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_scrambler.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_scrambler.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/gbt_pattern_checker.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/gbt_pattern_checker.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/clock_freq_meas/measure_refclk.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/clock_freq_meas/measure_refclk.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_descrambler.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_descrambler.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox_phasemon.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox_phasemon.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/xilinx_kultrascale/core_sources/xlx_ku_gbt_example_design.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/xlx_ku_gbt_example_design.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_encoder_gbtframe_polydiv.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_encoder_gbtframe_polydiv.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/xilinx_kultrascale/core_sources/gbtfpga_controller.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/gbtfpga_controller.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_errlcpoly.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_errlcpoly.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_encoder.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_encoder.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_encoder_gbtframe_rsencode.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_encoder_gbtframe_rsencode.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox_std.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox_std.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_gearbox.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_gearbox.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/xilinx_kultrascale/kcu105/vivado_kcu105_gbt_example_design.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/kcu105/vivado_kcu105_gbt_example_design.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/rxframeclk_phalgnr/phaligner_phase_comparator.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/rxframeclk_phalgnr/phaligner_phase_comparator.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox_std_rdwrctrl.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox_std_rdwrctrl.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/ctp_cdc_gbt.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/ctp_cdc_gbt.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/mgt/mgt_bitslipctrl.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/mgt/mgt_bitslipctrl.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox_latopt.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_tx/gbt_tx_gearbox_latopt.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/core_sources/gbt_bank_reset.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/core_sources/gbt_bank_reset.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/example_designs/xilinx_kultrascale/core_sources/xlx_ku_gbt_example_design_itsmft.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/example_designs/xilinx_kultrascale/core_sources/xlx_ku_gbt_example_design_itsmft.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_chnsrch.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_chnsrch.vhd"/>
+        <Attr Name="ImportTime" Val="1643786096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_rsdec.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/gbt_bank/core_sources/gbt_rx/gbt_rx_decoder_gbtframe_rsdec.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/GBT/ipbus_gbt_slave_top.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CTPv15/common_logic/RTL/GBT/ipbus_gbt_slave_top.vhd"/>
+        <Attr Name="ImportTime" Val="1643786097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ctpreadout"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="tc_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="ir_fifo"/>
+</GenRun>
